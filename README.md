@@ -11,7 +11,7 @@ Designers: Irvan Wibowo [Figma community](https://www.figma.com/@irvanwibowo)
 
 
 
-## Lesson learnt
+## Lessons learnt
 * console.log >>>
 * Browser Storage
 * Using Javascript to render html
@@ -29,11 +29,11 @@ git clone https://github.com/TLTechbender/Movies-recommendation-app.git
  ```
 
 #### TODO
--[x]Build static website first
--[x]Fetch from Api
--[x]Handle Api data 
--[x]Make website dynamic
--[] Responsive and sexy css
+- [x]Build static website first
+- [x]Fetch from Api
+- [x]Handle Api data 
+- [x]Make website dynamic
+- [] Responsive and sexy css
 
  ## HELP!!
 Suggestions and improvements would mean a lot to me, feel free to pull the repo and make it even better.
