@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../styles/reset.css">
+    <link rel="stylesheet" type="text/css" href="../styles/global.css">
+    <link rel="stylesheet" type="text/css" href="../styles/search.css">
+    <link rel="icon" class="favicon" type="image/png" size="32x32"  href="../assets/images/logo/Component-1.svg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+    <script defer src="../js/global.js" type="module"></script>
+    <script  src="./search.js" type="module"></script>
+    <!-- font-awesome -->
+<script src="https://kit.fontawesome.com/5b26c2cd27.js" crossorigin="anonymous"></script>
+</head>
+
+
+
+
+<body class="bg-black font-serif">
+
+
+    <header class="relative mx">
+        <nav class="flex my  top-0 z-10 left-0 m-inline-auto w-full items-center ">
+            <span class="help-search"><a href="../index.html"><img  src="../assets/images/logo/Component-1.svg" alt="logo"></a></span>
+        <ul class="flex">
+           <li><a href="../index.html" class="decoration-none extra-bold text-base text-white">Home</a></li>
+           
+           <li><a href="./upcoming.html" class="decoration-none extra-bold text-base text-white">Movie release</a></li>
+          </ul>
+  
+        <span class="gap-15 flex buttons icons-container">
+            <div class="search-holder relative flex">
+                <span class="search-container">
+                    <form action="./search.html" class="flex items-center gap-4 relative form">
+                        <input class="input" id="search-text" type="text" placeholder="search movies....." style="background:  #F9F9F9;" required>
+                        <input class="submit" type="submit" value="">
+                        <i class="fa-solid fa-xmark cancel-search text-2xl"></i>
+                    </form>
+                                           </span>
+                <i class="fa-solid fa-magnifying-glass text-2xl text-white search-toggle"></i>
+              </div>
+               <i class="fa-solid fa-bars text-2xl text-white menu-btn help-search"></i>
+           </span>
+        </nav>
+       </header>
+
+    
+<main>
+<article id="only-content" class="mx">
+   <p>Results for</p>
+   <h3 class="title">Puss in boots</h3>
+   <section class="article-wrapper">
+    
+    </section>
+</article>  
+</main>
+
+
+
+
+
+
+<footer class="mx my-15 py-16">
+    <section class="main-content flex flex-col justify-between items-start my-15">
+        <h1 class="text-white text-2xl text-left basis-half">Our platform is trusted by millions & features best updated movies all around the world</h1>
+
+        <div class="links-icons  flex flex-col h-full w-full justify-between basis-half text-right">
+            <ul class="links flex  gap-10">
+                <li><a class="capitalize text-gray-50" href="">Home</a></li>
+                <li><a class="capitalize text-gray-50" href="">discover</a></li>
+                <li><a class="capitalize text-gray-50" href="">release</a></li>
+                
+            </ul>
+           
+       <ul class="icons flex gap-10 ">
+        <li><a href=""><i class="fa-brands fa-instagram text-white"></i></a></li>
+        <li><a href=""><i class="fa-brands fa-github text-white"></i></a></li>
+        <li><a href=""><i class="fa-brands fa-twitter text-white"></i></a></li>
+        <li><a href=""><i class="fa-brands fa-spotify text-white"></i></a></li>
+       </ul>
+
+        </div>
+
+    </section>
+    <span class="capitalize text-gray-100 flex las-las">
+    <span class="flex gap-10">
+        <p class="woah">html</p>
+        <p class="woah">css</p>
+        <p class="woah">javascript</p>
+    </span>
+    <span class="flex"><p>powered by <a style="color: aqua;" href="https://developer.themoviedb.org/docs/getting-started">tmdb </a> api </p></span>
+         <span class="flex"><p>2023-Chef Brimz on this one</p></span>
+    </span>
+</footer>
+
+
+
+<!---Dont forget the footer too-->
+
+</body>
+</html>
