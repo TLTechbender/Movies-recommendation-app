@@ -29,10 +29,10 @@ git clone https://github.com/TLTechbender/Movies-recommendation-app.git
  ```
 
 #### TODO
-- [x]Build static website first
-- [x]Fetch from Api
-- [x]Handle Api data 
-- [x]Make website dynamic
+- [X] Build static website first
+- [X] Fetch from Api
+- [X] Handle Api data 
+- [X] Make website dynamic
 - [] Responsive and sexy css
 
  ## HELP!!
