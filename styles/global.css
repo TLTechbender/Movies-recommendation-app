@@ -1,0 +1,583 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Lato:wght@100;300;400;700&display=swap');
+
+:root{
+  --font-type: 'Lato', sans-serif;
+   --h1-font-size: 2.375rem;
+  --h2-font-size: 1.75rem;
+  --h3-font-size: 1.32rem;
+  --normal-text-size:1rem ;
+  --big-text-size: 1.25rem;
+  --bigger-text-size: 1.55rem;
+  --medium-text-size: .875rem;
+  --small-text-size: .75rem;
+  --smaller-text-size: .5rem; 
+  --default-line-height: .55rem;
+  --margin-inline: 16px;
+  --margin-block: 12px;
+  --icon-size: 24px;
+  --icon-size-small: 18px;
+   --z-fixed: 10;
+
+}
+
+
+
+@media screen and (min-width:500px){
+    :root{
+        /* responsive typography */
+        --h1-font-size: 2.6rem;
+        --h2-font-size: 1.9rem;
+        --h3-font-size: 1.5rem;
+        --normal-text-size:1.2rem;
+        --margin-inline: 26px;
+    }
+}
+
+
+@media screen and (min-width:767px){
+    :root{
+        /* responsive typography */
+        --h1-font-size: 3rem;
+        --h2-font-size: 2.55rem;
+        --h3-font-size: 2.09rem;
+        --normal-text-size:1.4rem ;
+  --margin-inline:75px;
+    }
+
+   
+}
+
+.grid{
+    display: grid;
+}
+::-webkit-scrollbar{
+    width: .35rem;
+    border-radius: .5rem;
+    background-color:black;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: gray;
+    border-radius: 6rem;
+}
+
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: gray;
+    border-radius: 6rem;
+}
+
+nav{
+    z-index: var(--z-fixed);
+    display: flex;
+    justify-content: space-between;
+    }
+    
+    header ul{
+        flex-direction: column;
+        gap: 20px;
+        position: fixed;
+        background: black;
+        left: -900px;
+        top: 0;
+         box-shadow:2px 2px 8px 0px #2E5CFF1A;
+         padding:  3rem 1.1rem;
+       z-index: var(--z-fixed);
+        width: 50vw;
+        height: 100vh;
+        transition: all .4s;
+    }
+    
+
+.show-menu{
+    left: 0 !important;
+    /* Because of css specifity wahala ehn, I am using !important to 
+    overide anything by any means necessary 😉  */
+}
+
+
+@media screen and (min-width:767px){
+    header span.buttons .menu-btn{
+        display: none;
+        visibility: hidden;
+    }
+
+    header ul{
+        flex-direction: row;
+        position: relative;
+        left: 0;
+        height: fit-content;
+        width: fit-content;
+        padding: 0;
+        background: none;
+        z-index: auto;
+    }
+}
+
+.search-holder{
+    transition: all 0.4s;
+}
+
+.search-toggle {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.search-toggle :is(:hover, :focus-visible){
+    opacity: 1;
+} 
+
+.center-it{
+    margin: 0 auto;
+}
+
+.search-holder{
+    margin: 0 auto;
+}
+
+.search-container{
+    display:none ;
+}
+.showSearch{
+    display: flex;
+    
+    width: 240px;
+    background: #28282B;
+
+    /*
+    
+    
+    
+    
+    */
+    padding-inline: 10px;
+    padding-block: 10px;
+    border-radius: 10px;
+   
+}
+
+form{
+margin: 0 auto;
+}
+
+
+@media screen and (min-width:767px) {
+    .center-it{
+        margin: 0 !important;
+    }
+
+
+    .showSearch{
+        width: 360px;
+       
+    }
+
+    form .input{
+        width: 290px;
+    }
+    
+}
+
+.hide-them{
+    display: none !important;
+    visibility: hidden !important;
+}
+
+form input{
+    border-radius: 5px;
+    padding: 5px;
+}
+
+form .submit{
+    background:url('../assets/images/search.png');
+    
+     width:30px;
+      background-size: cover;
+      background-position: center;
+}
+
+.cancel-search{
+    position:absolute;
+    right: 40px;
+}
+.font-serif{
+    font-family: var(--font-type);
+}
+.bg-black{
+    background-color: rgb(0 0 0);
+}
+
+.bg-black-800{
+    background: black ;
+}
+
+.flex{
+    display: flex;
+}
+
+.blur{
+    filter: blur(4);
+}
+.capitalize{
+    text-transform: capitalize;
+}
+.py-12{
+    padding-block: 12px;
+    
+}
+
+
+.object-cover{
+    object-fit: cover;
+}
+
+.object-center{
+    object-position: center;
+}
+.px-16{
+padding-inline: 16px;
+}
+.py-4{
+padding-block: 4px;
+}
+
+.icon-small{
+    font-size: var(--icon-size-small);
+}
+
+
+.px-24{
+    padding-inline:24px
+}
+
+.gap-10{
+    gap:10px;
+}
+
+.bg-green{
+    background-color: green;
+}
+
+.rounded-10px{
+  border-radius: 10px;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-start{
+    text-align: start;
+}
+
+.py-20{
+    padding-block:20px;
+}
+
+.px-12{
+    padding-inline: 12px;
+}
+
+.items-start{
+    align-items: flex-start;
+}
+.rounded-16px{
+    border-radius: 16px;
+  }
+.w-fit{
+    width:fit-content;
+}
+.drop-shadow-000000-75{
+    filter: drop-shadow(000000, 75%);
+}
+
+.rounded-50{
+    border-radius: 50%;
+}
+
+.bg-black-700{
+    background: 700 black;
+}
+.items-center{
+    align-items:center;
+}
+.text-sm{
+    font-size: var(--medium-text-size);
+}
+
+.text-xs{
+    font-size: var(--small-text-size);
+}
+
+.text-3xl{
+    font-size: var(--h2-font-size);
+}
+
+.p-8{
+padding: 8px;
+}
+
+.border-solid{
+    border-style: solid;
+}
+
+.border-2{
+    border-width: 2px;
+}
+
+.border-gray-100{
+    color: #F9F9F9;
+}
+
+.basis-half{
+    flex-basis: 50%;
+}
+
+.justify-end{
+    justify-content: flex-end;
+}
+    
+.my-15{
+    margin-block: 15px;
+}
+
+.py-16{
+    padding-block: 16px;
+}
+.z-100{
+    z-index: 100;
+}
+.text-green{
+    color: #008000;
+}
+.text-right{
+    text-align: right;
+}
+
+.justify-start{
+    justify-content: flex-start;
+}
+.gap-20{
+    gap:20px;
+}
+.text-gray{
+    color:gray;
+}
+
+.text-gray-100{
+    color: #78828A;
+}
+
+.flex-col{
+    flex-direction: column;
+}
+
+
+article:nth-child(1){
+    margin-block: none;
+}
+.gap-15{
+    gap:15px;
+}
+.justify-center{
+    justify-items: center;
+}
+.text-white{
+    color:white
+}
+
+.text-gray-50{
+    color: #F9F9F9;
+}
+
+.text-yellow{
+   color: #FFCD1A;
+}
+.text-base{
+    font-size:var(--medium-text-size); 
+
+}
+
+.font-semibold{
+    font-weight: 600;
+}
+
+.font-bold{
+    font-weight: 700;
+}
+
+.gap-8{
+    gap:8px;
+}
+
+.font-medium{
+    font-weight: 500;
+}
+
+.gap-4{
+    gap: 4px;
+}
+
+.text-xl{
+    font-size: var(--big-text-size);
+}
+
+.text-1xl{
+    font-size: var(--bigger-text-size);
+}
+
+.text-lg{
+    font-size: var(--normal-text-size);
+}
+
+.items-center{
+    align-items : center;
+}
+.leading-22{
+    line-height: 22px;
+}
+h2{
+    font-size: var(--h2-font-size);
+}
+.text-2xl	{
+    font-size: 1.5rem; 
+line-height: 2rem;
+
+}
+.decoration-none{
+    text-decoration: none;
+}
+
+.font-extrabold{
+    font-weight: 800;
+}
+
+.justify-between{
+    justify-content: space-between;
+}
+.relative{
+    position: relative;
+}
+
+.absolute{
+    position:absolute ;
+}
+
+.h-full{
+    height:100%;
+}
+
+
+.top-0{
+    top:0
+}
+
+.bottom-15{
+    bottom:15%;
+}
+
+.left-0{
+    left:0;
+}
+
+.left-30{
+    left: 30px;
+}
+.right-0{
+    right:0;
+}
+.m-inline-auto{
+    margin-inline:  0 auto;
+}
+
+.z-10{
+    z-index:10
+}
+
+.w-full{
+    width:100%;
+}
+
+.w-100vw{
+    width:100vw;
+}
+.mx{
+    margin-inline: var(--margin-inline);
+}
+
+.my{
+    margin-block: var(--margin-block);
+}
+
+.text-left{
+    text-align: left;
+}
+
+.fixed-item {
+    /* 
+  Makes the header stay on scroll */
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      padding-inline: var(--margin-inline);
+      z-index: var(--z-fixed);
+                
+  }
+
+  
+.links-icons ul.links,
+.links-icons ul.icons{
+    justify-content: center;
+}
+
+
+.links-icons ul.links li a::before{
+    content: '/';
+    color: gray;
+}
+
+footer{
+    border-top: 2px solid grey;
+}
+footer .las-las{
+    flex-direction: column;
+}
+footer .las-las span{
+    justify-content: center;
+}
+
+.links-icons{
+    justify-content: center;
+}
+
+@media screen and (min-width:767px){
+    
+
+footer .main-content{
+flex-direction: row;
+}
+
+.links-icons {
+    align-items: flex-end;
+    gap: 20px;
+ 
+   
+}
+
+
+.links-icons ul.links,
+.links-icons ul.icons{
+    justify-content: flex-end;
+}
+
+
+footer .las-las {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+}
+
+
+

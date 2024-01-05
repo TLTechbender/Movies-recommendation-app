@@ -1,0 +1,26 @@
+#only-content{
+   margin-block: 20px;
+}
+
+.article-wrapper{
+    display: grid;
+    margin: 0 auto;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(200px,250px));
+    gap: 1.5rem;
+    
+}
+
+
+.article-wrapper  picture {
+   max-width: 200px !important;
+  }
+
+.article-wrapper picture img{
+
+
+   height: 240px;
+   width: 200px !important;
+   
+
+}

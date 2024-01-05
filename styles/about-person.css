@@ -1,0 +1,86 @@
+
+#component-two .swiper .swiper-wrapper picture{
+    height: 403px;
+    max-width: 320px !important;
+    position: relative;
+
+}
+
+
+
+
+#component-two .swiper .swiper-wrapper picture img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+   
+}
+
+.swiper-button-prev, .swiper-button-next{
+    color: white !important;
+    border-radius: 50%;
+    background: black;
+    padding:30px;
+    font-size: 6px;
+}
+
+
+
+#component-two .swiper .swiper-wrapper .swiper-slide .poster-content{
+  position: absolute;
+  z-index: 100;
+  bottom: 14px;
+  left: 30px;
+
+}
+
+span p.dot-before{
+    margin-inline-start: 10px;
+}
+
+span p.dot-before::before {
+    content:'*';
+    align-items: center;
+    transform: translateY(25%);
+   
+   
+ }
+
+
+ span.slash-before::before{
+    margin-inline-start: 3.5px;
+    content:'|';
+    align-items: center;
+    color:#78828A;
+
+ }
+
+ #component-one picture{
+    flex-direction: column;
+
+ }
+
+ #component-one picture img{
+    max-height: 300px;
+    max-width: 300px;
+ }
+
+ @media screen and (min-width:800px) {
+    
+ #component-one picture{
+    flex-direction: row;
+
+ }
+
+ #component-one picture img{
+    max-height: 100%;
+    max-width: 100;
+ }
+ }
+
+ #component-two .swiper{
+    margin-inline-start: var(--margin-inline);
+ }
+

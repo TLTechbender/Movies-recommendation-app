@@ -1,0 +1,424 @@
+
+
+.swiper-slide-one{
+    min-height: 75vh;
+  
+}
+
+
+
+
+span.tiny-dots p{
+    position: relative;
+    margin-inline-start: 10px;
+    display: flex;
+}
+
+span.tiny-dots p::before {
+   content:'*';
+   align-items: center;
+   transform: translateY(25%);
+  
+  
+}
+
+.swiper-slide p.text-content{
+  width: 50%;
+}
+/* .swiper-pagination{
+    
+    text-align: right !important;    
+    right:0;
+    transform: translateY(-700%) !important;
+    margin-left: -75px;
+} */
+
+
+.movie-content{
+  left: 0;
+  bottom: 0;  
+  transform: translateY(-20px);
+  padding-inline: var(--margin-inline);
+
+}
+
+
+@media screen and (min-width:600px){
+    .movie-content{
+        width: 70%;
+    }
+
+    
+article :nth-child(1){
+    margin-block: none;
+}
+
+.swiper-pagination1{
+    
+    text-align: right !important;    
+    right:0;
+    transform: translateY(-700%) !important;
+    margin-left: -75px;
+}
+
+.swiper-pagination-bullet{
+    width: 14px !important;
+    height: 14px !important;
+}
+
+}
+
+@media screen and (min-width:768px){
+    
+    .movie-content{
+         width:50%;
+          left:30px;
+           bottom:25px;
+           gap:15px;
+           transform: translateY(0);
+    }
+
+    
+
+.swiper-pagination-bullet{
+    width: 20px !important;
+    height: 20px !important;
+}
+
+}
+
+
+picture.logos{
+    margin-block: 10px;
+    display: flex;
+    gap: 15px;
+    position: relative;
+    overflow-x: scroll;
+}
+
+picture.logos::-webkit-scrollbar {
+    display: none;
+  }
+  
+
+.logos img{
+    max-width: 180px;
+    height: 160px;
+}
+
+
+@media screen and (min-width:600px) {
+    
+.logos img{
+    max-width: 250px;
+    height: 220px;
+}
+    
+}
+
+@media screen  and (min-width:767px){
+    
+.logos img{
+    max-width: 320px;
+    height: 190px;
+}
+}
+
+#component-two{
+margin-block: 30px;
+}
+
+#component-two .swiper .swiper-wrapper picture{
+    height: 403px;
+    max-width: 320px !important;
+    position: relative;
+
+}
+
+
+
+
+#component-two .swiper .swiper-wrapper picture img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+   
+}
+
+.swiper-button-prev, .swiper-button-next{
+    color: white !important;
+    border-radius: 50%;
+    background: black;
+    padding:30px;
+    font-size: 6px;
+}
+
+
+
+#component-two .swiper .swiper-wrapper .swiper-slide .poster-content{
+  position: absolute;
+  z-index: 100;
+  bottom: 14px;
+  left: 30px;
+
+}
+
+span p.dot-before{
+    margin-inline-start: 10px;
+}
+
+span p.dot-before::before {
+    content:'*';
+    align-items: center;
+    transform: translateY(25%);
+   
+   
+ }
+
+
+ span.slash-before::before{
+    margin-inline-start: 3.5px;
+    content:'|';
+    align-items: center;
+    color:#78828A;
+
+ }
+
+
+
+ 
+#component-three{
+    margin-block: 30px;
+}
+    
+    
+    #component-three .swiper .swiper-wrapper picture{
+        height: 300px;
+        width:320px !important;
+        position: relative;
+        
+    
+
+    }
+
+
+    
+    #component-three .swiper .swiper-wrapper picture a{
+        height: 300px;
+        width:320px !important;
+        position: relative;
+        
+    
+    }
+
+
+    
+    #component-three .swiper .swiper-wrapper picture a img{
+       object-fit: cover;
+         max-width: 180px !important;
+        position: relative;
+    
+    }
+
+/* 
+    #component-four {
+        min-height: 95vh;
+    }
+       */
+   
+       #component-four .main-image {
+       height: 100%;
+    } 
+
+ #component-four .movie-cards picture.swiper-slide {
+    height: 360px;
+    max-width: 300px !important;
+    
+
+}
+
+#component-four .content{
+   padding-block: 16px
+ }
+     
+ #component-four  .content .description{
+   margin-block: 16px;
+   margin-inline-start: var(--margin-inline);
+ }
+
+
+
+    
+ #component-four  .content .movie-cards{
+    margin-block: 16px;
+    margin-inline-start: var(--margin-inline);
+ }
+
+ #component-four .movie-cards picture.swiper-slide img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    
+ }
+
+     
+ #component-four .movie-cards picture.swiper-slide img:hover{
+    border: 2px solid red;
+    
+ }
+
+     
+ #component-four .movie-cards picture.swiper-slide .poster-content {
+    position: absolute;
+    z-index: 100;
+    bottom: 14px;
+    left: 30px;
+ }
+
+
+
+ @media screen and (min-width: 548px){
+    
+    #component-four {
+        min-height: 65vh;
+    }
+       
+    #component-four .main-image {
+        min-height: 65vh;
+    }
+
+    #component-four .content{
+/**
+Apparrently the swiper does not really like flexbox*/
+        min-height: 65vh; 
+        display: flex;
+        
+        
+    }
+
+    
+ #component-four .movie-cards picture.swiper-slide {
+    height: 403px;
+    max-width: 320px !important;
+    
+
+}
+
+
+#component-four  .content .movie-cards{
+     margin-inline-start: 0;
+ }
+
+     
+ }
+
+ #component-five, #component-six, #component-seven {
+     margin-inline-start: var(--margin-inline);
+ 
+ }
+ #component-five  picture.swiper-slide,
+ #component-six  picture.swiper-slide,
+ #component-seven  picture.swiper-slide
+  {
+    max-width: 360px !important;
+    
+
+}
+
+
+
+#component-five  picture.swiper-slide img,
+#component-six  picture.swiper-slide img,
+#component-seven  picture.swiper-slide img{
+    height: 240px;
+    width: 360px !important;
+    
+
+}
+
+#component-eight .content-wrapper{
+    flex-direction: column;
+}
+
+/* 
+.flex-card{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.flex-card img{
+    max-width: 120px;
+    max-height: 120px;
+    border-radius: 10px;
+} */
+
+
+
+.live-fast-content picture a img{
+    max-width:160px;
+} 
+.content-wrapper .live-fast-content{
+     grid-template-columns: 1fr;
+     gap: 10px;
+    
+}
+
+@media screen and (min-width:600px){
+
+    .content-wrapper{
+        gap: 28px;
+    }
+
+    .content-wrapper .live-fast-content{
+        grid-template-columns: repeat(2,1fr);
+       
+   }
+   
+    
+}
+
+@media screen and (max-width:300px){
+    
+.live-fast-content picture a img{
+    max-width:100px;
+} 
+
+
+}
+@media screen  and (min-width:1024px){
+    
+#component-eight .content-wrapper{
+   flex-direction: row;
+   justify-content: space-between;
+   
+
+}
+
+/*I had to use this work around cos the swiper kept going crazy*/
+/* 
+.content-wrapper .awards{
+  
+} */
+
+
+    /*Apparently swiper.js is going crazy if I try to put two swipers side by side
+    Na the designer do me strong thing*/
+
+/*     
+.content-wrapper .live,
+.content-wrapper .fast{
+    min-width: 160px;
+    max-width: 400px;
+    flex-basis: 50%;
+} */
+
+}
+
+
+
+
