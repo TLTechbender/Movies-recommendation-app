@@ -19,10 +19,9 @@ span.tiny-dots p{
 }
 
 span.tiny-dots p::before {
-   content:'*';
-   align-items: center;
-   transform: translateY(25%);
-  
+  content:'•';
+  margin-inline: auto;
+      
   
 }
 

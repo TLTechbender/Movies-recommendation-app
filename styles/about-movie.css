@@ -20,10 +20,9 @@ span.tiny-dots p{
 }
 
 span.tiny-dots p::before {
-   content:'*';
-   align-items: center;
-   transform: translateY(25%);
-  
+  content:'•';
+  margin-inline: auto;
+    
   
 }
 
@@ -83,37 +82,34 @@ span.tiny-dots p::before {
   }
 
 
-  .actor{
-    max-width: 200px;
-  }
- 
   .actor-image{
-    height: 60px;
-    width: 60px;
+    height: 48px;
+    width: 48px;
   }
-  
+   
 
 
   #component-four {
     margin-inline-start: var(--margin-inline);
 
 }
-#component-four  picture.swiper-slide{
-   max-width: 360px !important;
-   
-
-}
 
 
 #component-four  picture.swiper-slide img{
    height: 240px;
-   width: 360px !important;
+   width: 360px;
+ 
    
 }
 
 .youtube-card{
-  height: 200px !important;
-  max-width: 360px !important;
-  background: gray;
+  height: 200px;
+ 
+ 
 
+}
+
+
+iframe{
+  margin: 0 auto;
 }

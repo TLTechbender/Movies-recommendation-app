@@ -46,13 +46,13 @@ const {
 
     month.innerHTML =
    `
-<picture class="">
+<picture>
 <a href="./about-movie.html" class="flex gap-4 items-center text-center">
-<p class="text-white text-2xl  p-8 rounded-50 bg-black">${original_language}</p>
+<p class="text-white text-2xl font-serif-one font-extrabold p-8 rounded-50 bg-black">${original_language}</p>
 <img src="${imageBaseUrl}/w500/${poster_path}" class="rounded-10px" alt="${title}">
 <span class="flex flex-col">
-<p class="capitalize text-xl font-extrabold text-white text-start h-full py-20 px-12">${title}</p>  
-<p class="capitalize text-xl font-extrabold text-white text-start h-full py-20 px-12">${checkDate(release_date)}</p> 
+<p class="capitalize text-xl font-extrabold text-white text-start h-full py-20 px-12 font-serif-one">${title}</p>  
+<p class="capitalize text-xl font-extrabold text-white text-start h-full py-20 px-12 font-serif-two">${checkDate(release_date)}</p> 
 </span> 
 </a>
 </picture>

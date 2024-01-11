@@ -7,6 +7,24 @@ var swiper = new Swiper('.swiper', {
   keyboard: {
     enabled: true,
   },
+
+  breakpoints: {
+       
+    
+    380: {
+      slidesPerView: 2,
+      spaceBetweenSlides: 26
+  },
+   700: {
+        slidesPerView: 3,
+        spaceBetweenSlides: 30
+    }
+,
+    1200:{
+        slidesPerView: 4,
+        spaceBetweenSlides: 30
+    }
+},
   
    navigation: {
      nextEl: '.swiper-button-next',
@@ -56,10 +74,10 @@ component_one_content.innerHTML = `
 <img src="${imageBaseUrl}/w500/${profile_path}" class="rounded-10px" alt="${name}">
 <div class="text-white h-full flex flex-col justify-between">
     <span>
-        <h3>${name}</h3>
-        <h2>biography</h2>
+        <h3 class="text-left font-serif-two font-bold text-white capitalize text-xs">${name}</h3>
+        <h2 class="font-serif-two font-light text-white text-left text-1xl capitalize">biography</h2>
     </span>
-    <p>${biography}</p>
+    <p class="font-serif-two font-light text-white text-left text-base leading-22">${biography}</p>
 </div>
 
 `
@@ -108,7 +126,7 @@ const component_two_wrapper = component_two.querySelector(".swiper-wrapper");
       
     } = credit
 
-    console.log(credit);
+    
 
 
      
@@ -118,21 +136,21 @@ swiperOneSlide.classList.add('swiper-slide', 'swiper-slide-one');
 
    swiperOneSlide.innerHTML = `
    <a href="./about-movie.html">
-   <img class="rounded-10px" src="${poster_path == null ? '../assets/images/dark.jpg': `${imageBaseUrl}/w185/${poster_path}`}" alt="${original_title}">
+   <img class="rounded-10pxobject-cover object-center" loading="eager" src="${poster_path == null ? '../assets/images/dark.jpg': `${imageBaseUrl}/w185/${poster_path}`}" alt="${original_title}">
 
-   <div class="poster-content">
+   <div class="poster-content flex flex-col gap-12">
    <span>
-       <p class="text-gray-50 text-1xl capitalize font-bold">${original_title}</p>
+       <p class="text-gray-50 text-1xl capitalize font-serif-two leading-32 font-bold">${original_title}</p>
    </span>
    
    <span class="flex gap-4 items-center">
    <span class="flex gap-4 items-center">
        <i class="fa-solid fa-star text-yellow icon-small"></i>
-       <p class="text-xl text-gray-50 font-semibold">${vote_average}</p>
+       <p class="text-xl text-gray-50 font-semibold font-serif-two leading-20 text-center">${vote_average}</p>
    </span>
 
    <span class="slash-before text-gray-100 text-xs font-medium flex gap-4 capitalize">
-          <p class="dot-before flex capitalize">${original_language}</p>
+          <p class="text-xl text-gray-50 font-semibold font-serif-two leading-20 text-center">${original_language}</p>
    </span>
    </span>
 </div>
@@ -185,7 +203,7 @@ function seriesCredit({cast : creditData}){
   
 } = credit
 
-console.log(credit);
+
 
 
  
@@ -196,21 +214,21 @@ swiperOneSlide.classList.add('swiper-slide', 'swiper-slide-two');
 
 swiperOneSlide.innerHTML = `
 <a href="./about-series.html">
-<img class="rounded-10px" src="${poster_path == null ? '../assets/images/dark.jpg': `${imageBaseUrl}/w185/${poster_path}`}" alt="${name}">
+<img class="rounded-10px object-cover object-center" loading="eager" src="${poster_path == null ? '../assets/images/dark.jpg': `${imageBaseUrl}/w185/${poster_path}`}" alt="${name}">
 
-<div class="poster-content">
+<div class="poster-content flex flex-col gap-12">
 <span>
-   <p class="text-gray-50 text-1xl capitalize font-bold">${name}</p>
+   <p class="text-gray-50 text-1xl capitalize font-serif-two leading-32  font-bold">${name}</p>
 </span>
 
 <span class="flex gap-4 items-center">
 <span class="flex gap-4 items-center">
    <i class="fa-solid fa-star text-yellow icon-small"></i>
-   <p class="text-xl text-gray-50 font-semibold">${vote_average}</p>
+   <p class="text-xl text-gray-50 font-semibold font-serif-two leading-20 text-center">${vote_average}</p>
 </span>
 
 <span class="slash-before text-gray-100 text-xs font-medium flex gap-4 capitalize">
-      <p class="dot-before flex capitalize">${original_language}</p>
+      <p class="text-xl text-gray-50 font-semibold font-serif-two leading-20 text-center">${original_language}</p>
 </span>
 </span>
 </div>

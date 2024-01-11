@@ -1,7 +1,7 @@
 
 
 .swiper-slide-one{
-    min-height: 75vh;
+    min-height: 88vh;
   
 }
 
@@ -15,28 +15,22 @@ span.tiny-dots p{
 }
 
 span.tiny-dots p::before {
-   content:'*';
-   align-items: center;
-   transform: translateY(25%);
-  
+    content:'•';
+    margin-inline: auto;
+ 
   
 }
 
-.swiper-slide p.text-content{
+.swiper-slide-one .swiper-slide p.text-content{
   width: 50%;
 }
-/* .swiper-pagination{
-    
-    text-align: right !important;    
-    right:0;
-    transform: translateY(-700%) !important;
-    margin-left: -75px;
-} */
 
+   
+.swiper-pagination1{margin-block-start: 60px;}
 
 .movie-content{
   left: 0;
-  bottom: 0;  
+  bottom: 35px;  
   transform: translateY(-20px);
   padding-inline: var(--margin-inline);
 
@@ -53,13 +47,6 @@ article :nth-child(1){
     margin-block: none;
 }
 
-.swiper-pagination1{
-    
-    text-align: right !important;    
-    right:0;
-    transform: translateY(-700%) !important;
-    margin-left: -75px;
-}
 
 .swiper-pagination-bullet{
     width: 14px !important;
@@ -73,7 +60,7 @@ article :nth-child(1){
     .movie-content{
          width:50%;
           left:30px;
-           bottom:25px;
+           bottom:55px;
            gap:15px;
            transform: translateY(0);
     }
@@ -87,11 +74,21 @@ article :nth-child(1){
 
 }
 
+@media screen  and (min-width:1800px){
+    
+.swiper-pagination1{
+    
+    text-align: right !important;    
+    right:0;
+    transform: translateY(-700%) !important;
+    margin-left: -75px;
+}
+}
+
 
 picture.logos{
-    margin-block: 10px;
     display: flex;
-    gap: 15px;
+    gap: 28px;
     position: relative;
     overflow-x: scroll;
 }
@@ -103,7 +100,8 @@ picture.logos::-webkit-scrollbar {
 
 .logos img{
     max-width: 180px;
-    height: 160px;
+   height: 45px;
+   border-radius: 14px;
 }
 
 
@@ -112,6 +110,7 @@ picture.logos::-webkit-scrollbar {
 .logos img{
     max-width: 250px;
     height: 220px;
+    border-radius: 18px;
 }
     
 }
@@ -121,19 +120,22 @@ picture.logos::-webkit-scrollbar {
 .logos img{
     max-width: 320px;
     height: 190px;
+    border-radius: 22px;
 }
 }
 
-#component-two{
-margin-block: 30px;
-}
-
-#component-two .swiper .swiper-wrapper picture{
+#component-two .swiper .swiper-wrapper .swiper-slide{
     height: 403px;
-    max-width: 320px !important;
-    position: relative;
-
+    
 }
+
+
+#component-two .swiper .swiper-wrapper .swiper-slide .swiper-slide-content{
+    width: inherit;
+    
+}
+
+
 
 
 
@@ -165,27 +167,24 @@ margin-block: 30px;
 
 }
 
-span p.dot-before{
-    margin-inline-start: 10px;
-}
-
-span p.dot-before::before {
-    content:'*';
-    align-items: center;
-    transform: translateY(25%);
-   
-   
- }
 
 
- span.slash-before::before{
-    margin-inline-start: 3.5px;
+span.slash-before::before{
     content:'|';
-    align-items: center;
+    margin-block: auto;
     color:#78828A;
 
  }
 
+ 
+span p.dot-before{
+    margin-inline-start: 2px;
+}
+
+span p.dot-before::before {
+    content:'•';
+    margin-block: auto;
+   }
 
 
  
@@ -194,50 +193,26 @@ span p.dot-before::before {
 }
     
     
-    #component-three .swiper .swiper-wrapper picture{
+    #component-three .swiper .swiper-wrapper picture .swiper-slide-content{
         height: 300px;
-        width:320px !important;
+        width:inherit;
         position: relative;
         
-    
-
-    }
-
-
-    
-    #component-three .swiper .swiper-wrapper picture a{
-        height: 300px;
-        width:320px !important;
-        position: relative;
         
-    
-    }
+  }
 
 
     
-    #component-three .swiper .swiper-wrapper picture a img{
+    #component-three .swiper .swiper-wrapper picture .swiper-slide-content  img{
        object-fit: cover;
          max-width: 180px !important;
         position: relative;
     
     }
 
-/* 
-    #component-four {
-        min-height: 95vh;
-    }
-       */
-   
-       #component-four .main-image {
-       height: 100%;
-    } 
-
- #component-four .movie-cards picture.swiper-slide {
-    height: 360px;
-    max-width: 300px !important;
+ 
     
 
-}
 
 #component-four .content{
    padding-block: 16px
@@ -256,20 +231,48 @@ span p.dot-before::before {
     margin-inline-start: var(--margin-inline);
  }
 
- #component-four .movie-cards picture.swiper-slide img{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    border-radius: 10px;
+ #component-four .movie-cards .swiper-slide {
+    height: 360px;
+     } 
+   
+ #component-four .movie-cards .swiper-slide .swiper-slide-content {
+     width: inherit;
+     height: 360px;
+     margin: 0 auto;
+    
+
+}
+ 
+ #component-four .movie-cards .swiper-slide .swiper-slide-content{
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
     
  }
+ #component-four .movie-cards .swiper-slide .swiper-slide-content img{
+    top: 0;
+    left: 0;
+   
+ }
 
-     
- #component-four .movie-cards picture.swiper-slide img:hover{
-    border: 2px solid red;
-    
+   
+ #component-four .movie-cards .swiper-slide .swiper-slide-content:hover{
+   transform: translateX(-14px);    
+   cursor: pointer;
+ }
+ 
+
+ .active-slide{
+
+    /*
+    I had to use !important here cos of how strong the selector of the element this would be applied to is*/
+    border: 2.5px solid green !important;
+    filter: grayscale(0%) !important;
+    filter: gray !important;
+    -webkit-filter: grayscale(0%) !important;
+    filter: none !important;
+    transition: 1s ease;
  }
 
      
@@ -285,11 +288,11 @@ span p.dot-before::before {
  @media screen and (min-width: 548px){
     
     #component-four {
-        min-height: 65vh;
+        min-height: 78vh;
     }
        
     #component-four .main-image {
-        min-height: 65vh;
+        min-height: 78vh;
     }
 
     #component-four .content{
@@ -302,9 +305,16 @@ Apparrently the swiper does not really like flexbox*/
     }
 
     
- #component-four .movie-cards picture.swiper-slide {
+ #component-four .movie-cards .swiper-slide {
     height: 403px;
-    max-width: 320px !important;
+    
+    } 
+   
+    
+ #component-four .movie-cards .swiper-slide .swiper-slide-content{
+    height: 403px;
+    width: inherit;
+    margin: unset;
     
 
 }
@@ -321,22 +331,24 @@ Apparrently the swiper does not really like flexbox*/
      margin-inline-start: var(--margin-inline);
  
  }
+
+/* 
  #component-five  picture.swiper-slide,
  #component-six  picture.swiper-slide,
  #component-seven  picture.swiper-slide
   {
-    max-width: 360px !important;
-    
+    /* max-width: 360px !important; */
+     
 
-}
 
+ 
 
 
 #component-five  picture.swiper-slide img,
 #component-six  picture.swiper-slide img,
 #component-seven  picture.swiper-slide img{
     height: 240px;
-    width: 360px !important;
+     width: 360px !important;
     
 
 }

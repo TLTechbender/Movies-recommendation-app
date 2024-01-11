@@ -14,6 +14,7 @@ const searchParam = localStorage.getItem('searchQuery');
 
 document.title = `${searchParam} - Saintstream movies`
 
+title.innerHTML = `${searchParam}`
 
 let count = [];
 const searchMovie = function({results: movieList}){
@@ -43,28 +44,28 @@ const searchMovie = function({results: movieList}){
   
   searchSlide.innerHTML = 
 
-  `
+  (`
   <a href="./about-movie.html">
-  <img src="${imageBaseUrl}/w500/${poster_path}" class="rounded-10px" alt="${title}">
+  <img src="${imageBaseUrl}/w500/${poster_path}" class="rounded-10px object-cover object-center" alt="${title}">
 <div class="poster-content flex flex-col items-start gap-4">
     <span>
-        <p class="text-gray-50 text-1xl capitalize font-bold">${title}</p>
+    <p class="text-gray-50 text-1xl capitalize  font-serif-two leading-32 font-bold">${title}</p>
     </span>
     
     <span class="flex gap-4 items-center">
     <span class="flex gap-4 items-center">
         <i class="fa-solid fa-star text-yellow icon-small"></i>
-        <p class="text-xl text-gray-50 font-semibold">${vote_average}</p>
+        <p class="text-xl text-gray-50 font-semibold font-serif-two leading-20 text-center">${vote_average}</p>
     </span>
 
     <span class="slash-before text-gray-100 text-xs font-medium flex gap-4 capitalize">
-    <p>${original_language}</p>
-    <p class="dot-before flex capitalize">${release_date.substring(0, release_date.indexOf('-'))}</p>
+    <p class="dot-before flex capitalize font-serif-two leading-20 text-center">${original_language}</p>
+    <p class="font-serif-two leading-20 text-center dot-before">${release_date.substring(0,release_date.indexOf('-'))}</p>
     </span>
     </span>
 </div>
 </a>
-  `;
+  `);
   only_content_wrapper.appendChild(searchSlide);
   searchSlide.addEventListener('click', ()=>{
     getMovieId(id);
@@ -125,28 +126,28 @@ const searchSeries = function({results: seriesList}){
   
   searchSlide.innerHTML = 
 
-  `
+  (`
   <a href="./about-series.html">
   <img src="${imageBaseUrl}/w500/${poster_path}" class="rounded-10px" alt="${name}">
 <div class="poster-content flex flex-col items-start gap-4">
     <span>
-        <p class="text-gray-50 text-1xl capitalize font-bold">${name}</p>
+        <p class="text-gray-50 text-1xl capitalize  font-serif-two leading-32 font-bold">${name}</p>
     </span>
     
     <span class="flex gap-4 items-center">
     <span class="flex gap-4 items-center">
         <i class="fa-solid fa-star text-yellow icon-small"></i>
-        <p class="text-xl text-gray-50 font-semibold">${vote_average}</p>
+        <p class="text-xl text-gray-50 font-semibold font-serif-two leading-20 text-center">${vote_average}</p>
     </span>
 
     <span class="slash-before text-gray-100 text-xs font-medium flex gap-4 capitalize">
-    <p>${original_language}</p>
-    <p class="dot-before flex capitalize">${first_air_date.substring(0, first_air_date.indexOf('-'))}</p>
+    <p class="flex capitalize font-serif-two leading-20 text-center">${original_language}</p>
+    <p class="font-serif-two leading-20 text-center">${first_air_date.substring(0, first_air_date.indexOf('-'))}</p>
     </span>
     </span>
 </div>
 </a>
-  `
+  `);
   only_content_wrapper.appendChild(searchSlide);
   searchSlide.addEventListener('click', ()=>{
     getSeriesId(id);

@@ -10,20 +10,20 @@
     <link rel="stylesheet" type="text/css" href="./styles/index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-    <script defer src="./js/global.js" type="module"></script>
-    <script src="./views/index.js" type="module"></script>
+    <script defer  src="./js/global.js" type="module"></script>
+    <script defer src="./views/index.js" type="module"></script>
     <!-- font-awesome -->
 <script src="https://kit.fontawesome.com/5b26c2cd27.js" crossorigin="anonymous"></script>
 </head>
-<body class="bg-black font-serif">
+
+
+<body class="bg-black">
  
-  
+    <!-- <div id="loader" class="center"></div> -->
 
 
     <main>
-
-
-       
+      
 
         <article id="component-one" class="relative">
 
@@ -31,23 +31,23 @@
                 <nav class="flex my absolute top-0 z-10 left-0 m-inline-auto w-full items-center ">
                 <span class="help-search"><a href="./index.html"><img  src="./assets/images/logo/Component-1.svg" alt="logo"></a></span>
                 <ul class="flex">
-                   <li><a href="./index.html" class="decoration-none extra-bold text-base text-white">Home</a></li>
+                   <li><a href="./index.html" class="decoration-none font-serif-one font-light text-base text-white nav-link">Home</a></li>
                    
-                   <li><a href="./views/upcoming.html" class="decoration-none extra-bold text-base text-white">Movie release</a></li>
+                   <li><a href="./views/upcoming.html" class="decoration-none font-serif-one font-light text-base text-white nav-link">Movie release</a></li>
                   </ul>
            
                 <span class="gap-15 flex buttons icons-container">
                     <div class="search-holder relative flex">
                         <span class="search-container">
                             <form  action="./views/search.html"  class="flex items-center gap-4 relative form">
-                                <input  class="input" id="search-text"  type="text" placeholder="search movies....." style="background:  #F9F9F9" required>
-                                <input class="submit" type="submit" value="">
-                                <i class="fa-solid fa-xmark cancel-search text-2xl"></i>
+                                <input  class="input font-serif-two" id="search-text"  type="text" placeholder="search movies....." style="background:  #F9F9F9" required>
+                                <input class="submit cursor-pointer" type="submit" value="">
+                                <i class="fa-solid fa-xmark cancel-search text-2xl text-red cursor-pointer font-serif-one"></i>
                             </form>
                                                    </span>
                         <i class="fa-solid fa-magnifying-glass text-2xl text-white search-toggle"></i>
                       </div>
-                       <i class="fa-solid fa-bars text-2xl text-white menu-btn help-search"></i>
+                       <i class="fa-solid cursor-pointer fa-bars text-2xl text-white menu-btn help-search"></i>
                    </span>
                 </nav>
                </header>
@@ -64,22 +64,11 @@
  
    
 
-   <picture class="logos mx">
-
-                <img src="./assets/images/logo/disney.svg" alt="brand logo">
-            <img src="./assets/images/logo/tmdb-logo.svg" alt="brand logo">
-            <img src="./assets/images/logo/netflix-3.svg" alt="brand logo">
-            <img src="./assets/images/logo/tmdb-logo.svg" alt="brand logo">
-            <img src="./assets/images/logo/pixar_logo.svg"  alt="brand logo">
-            <img src="./assets/images/logo/tmdb-logo.svg" alt="brand logo">
-
-          
-       
-
+   <picture class="logos mx my-40">
    </picture>
 
-   <article id="component-two" class="mx">
-    <h2 class="text-white capitalize">trending today</h2>
+   <article id="component-two" class="mx my-40">
+    <h2 class="text-white capitalize mbe-24 font-serif-two leading-32">trending today</h2>
     <div class="swiper swiper2">
       <div class="swiper-wrapper">
                
@@ -93,8 +82,8 @@
    </article>
 
 
-   <article id="component-three" class="mx">
-    <h2 class="text-white">Popular this week</h2>
+   <article id="component-three" class="mx my-40">
+    <h2 class="text-white capitalize mbe-24 font-serif-two leading-32">Popular this week</h2>
 
 
     <div class="swiper swiper3">
@@ -111,13 +100,13 @@
    </article>
 
 
-   <article id="component-four" class="relative">
-    <img src=""  class="absolute w-full main-image banner-image" alt="">
-    <section class="content z-10 items-center">
+   <article id="component-four" class="relative my-40">
+    <img src=""  class="absolute w-full h-full main-image banner-image object-cover object-center">
+    <section class="content  items-center">
         
-        <div class="description basis-half z-100 relative flex flex-col gap-20">
+        <div class="description basis-half  relative flex flex-col gap-20">
             
-        </div> -->
+        </div> 
         
 
 
@@ -134,8 +123,8 @@
 
 
 
-   <article id="component-five" class="relative">
-    <h2 class="text-white">animation</h2>
+   <article id="component-five" class="relative my-40">
+    <h2 class="text-white capitalize mbe-24 font-serif-two leading-32">animation</h2>
 
     <div class="swiper swiper5">
         <div class="swiper-wrapper">
@@ -149,8 +138,8 @@
     </div>
    </article>
 
-   <article id="component-six">
-    <h2 class="text-white">series</h2>
+   <article id="component-six" class="my-40">
+    <h2 class="text-white capitalize mbe-24 font-serif-two leading-32">series</h2>
             <div class="swiper swiper6">
             <div class="swiper-wrapper">
              
@@ -163,8 +152,8 @@
     </div>
    </article>
 
-   <article id="component-seven">
-    <h2 class="text-white">Hindi</h2>
+   <article id="component-seven" class="my-40">
+    <h2 class="text-white capitalize mbe-24 font-serif-two leading-32">Hindi</h2>
     <div class="swiper swiper7">
         <div class="swiper-wrapper">
         
@@ -189,7 +178,7 @@
         <div class="award basis-half">
           
             <div class="heading text-white">
-                <h2>Movies on awards</h2>
+                <h2 class="text-white capitalize font-serif-two mbe-24 leading-32">Movies on awards</h2>
             </div>
     
                            <!--  -->
@@ -201,7 +190,7 @@
     
         <div class="live-fast flex flex-col basis-half">
             <div class="text-white heading">
-                <h2>best of tv</h2>
+                <h2 class="text-white capitalize  font-serif-two mbe-24 leading-32">best of tv</h2>
             </div>
             
             <div class="live-fast-content grid">
@@ -220,21 +209,20 @@
 </main>
     <footer class="mx my-15 py-16">
         <section class="main-content flex flex-col justify-between items-start my-15">
-            <h1 class="text-white text-2xl text-left basis-half">Our platform is trusted by millions & features best updated movies all around the world</h1>
+            <h1 class="text-white text-2xl text-left basis-half leading-48 font-serif-two">Our platform is trusted by millions & features best updated movies all around the world</h1>
 
             <div class="links-icons  flex flex-col h-full w-full justify-between basis-half text-right">
                 <ul class="links flex  gap-10">
-                    <li><a class="capitalize text-gray-50" href="">Home</a></li>
-                    <li><a class="capitalize text-gray-50" href="">discover</a></li>
-                    <li><a class="capitalize text-gray-50" href="">release</a></li>
+                    <li><a class="capitalize text-gray-50 font-medium leading-32 font-serif-two" href="./index.html">Home</a></li>
+                    <li><a class="capitalize text-gray-50 font-medium leading-32 font-serif-two" href="./views/upcoming.html">release</a></li>
                     
                 </ul>
                
            <ul class="icons flex gap-10 ">
-            <li><a href=""><i class="fa-brands fa-instagram text-white"></i></a></li>
-            <li><a href=""><i class="fa-brands fa-github text-white"></i></a></li>
-            <li><a href=""><i class="fa-brands fa-twitter text-white"></i></a></li>
-            <li><a href=""><i class="fa-brands fa-spotify text-white"></i></a></li>
+            <li><a href="https://www.instagram.com/techbender"><i class="fa-brands fa-instagram text-white"></i></a></li>
+            <li><a href="https://github.com/TLTechbender"><i class="fa-brands fa-github text-white"></i></a></li>
+            <li><a href="https://twitter.com/TLTechbender"><i class="fa-brands fa-twitter text-white"></i></a></li>
+            <li><a href="https://open.spotify.com/user/31j2tjm5ygnur5lb2ayc3zjyubnm"><i class="fa-brands fa-spotify text-white"></i></a></li>
            </ul>
 
             </div>
@@ -242,12 +230,12 @@
         </section>
         <span class="capitalize text-gray-100 flex las-las">
         <span class="flex gap-10">
-            <p class="woah">html</p>
-            <p class="woah">css</p>
-            <p class="woah">javascript</p>
+            <p class="font-serif-two leading-22 text-gray-100 font-medium">html</p>
+            <p class="font-serif-two leading-22 text-gray-100 font-medium">css</p>
+            <p class="font-serif-two leading-22 text-gray-100 font-medium">javascript</p>
         </span>
-        <span class="flex"><p>powered by <a style="color: aqua;" href="https://developer.themoviedb.org/docs/getting-started">tmdb </a> api </p></span>
-             <span class="flex"><p>2023-Chef Brimz on this one</p></span>
+        <span class="flex"><p class="font-serif-two leading-22 text-gray-100 font-medium">powered by <a style="color: aqua;" href="https://developer.themoviedb.org/docs/getting-started">tmdb </a> api </p></span>
+             <span class="flex"><p class="font-serif-two leading-22 text-gray-100 font-medium">2023-Chef Brimz on this one</p></span>
              
         </span>
     </footer>

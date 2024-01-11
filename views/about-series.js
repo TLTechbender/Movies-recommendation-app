@@ -5,9 +5,26 @@ const swiperone = document.querySelector('swiper1');
 var swiper1 = new Swiper('.swiper1', {
   slidesPerView: 1,
   spaceBetween: 30,
-  keyboard: {
-    enabled: true,
+  
+
+  breakpoints: {
+       
+    
+    380: {
+      slidesPerView: 2,
+      spaceBetweenSlides: 26
   },
+   700: {
+        slidesPerView: 3,
+        spaceBetweenSlides: 30
+    }
+,
+    1200:{
+        slidesPerView: 6,
+        spaceBetweenSlides: 30
+    }
+},
+
   
    navigation: {
      nextEl: '.swiper-button-next',
@@ -22,9 +39,21 @@ var swiper1 = new Swiper('.swiper1', {
 var swiper2 = new Swiper('.swiper2', {
   slidesPerView: 1,
   spaceBetween: 30,
-  keyboard: {
-    enabled: true,
+  
+  breakpoints: {
+       
+    
+    280: {
+      slidesPerView: 2,
+      spaceBetweenSlides: 24
   },
+
+    380: {
+      slidesPerView: 3,
+      spaceBetweenSlides: 26
+  }
+},
+
   
    navigation: {
      nextEl: '.swiper-button-next',
@@ -40,14 +69,32 @@ var swiper2 = new Swiper('.swiper2', {
 var swiper3 = new Swiper('.swiper3', {
   slidesPerView: 1,
   spaceBetween: 30,
-  keyboard: {
-    enabled: true,
-  },
+  
   
    navigation: {
      nextEl: '.swiper-button-next',
      prevEl: '.swiper-button-prev',
    },
+
+   
+   breakpoints: {
+       
+    
+    380: {
+      slidesPerView: 2,
+      spaceBetweenSlides: 26
+  },
+   700: {
+        slidesPerView: 3,
+        spaceBetweenSlides: 30
+    }
+,
+    1200:{
+        slidesPerView: 4,
+        spaceBetweenSlides: 30
+    }
+},
+
 
   // Enable debugger
   debugger: true,
@@ -139,20 +186,19 @@ const {
      
   <img class="main-picture absolute w-full h-full object-center object-cover" src = "${imageBaseUrl}/w1280/${backdrop_path}" alt="${original_name}">
   <div class="movie-content absolute flex flex-col gap-15">
-  <h3 class="text-base text-white bg-black-800 px-16 py-4 rounded-16px w-fit">${getGenresName(genres)}</h3>
-  <h2 class="text-left font-extrabold text-white capitalize">${original_name}</h2>
+  <h3 class="text-sm font-serif-two text-white bg-black-800 px-16 py-4 rounded-16px w-fit">${getGenresName(genres)}</h3>
+  <h2 class="text-left font-serif-two font-bold text-white capitalize">${original_name}</h2>
   <span class="tiny-dots text-white flex">
-  <p>${first_air_date.substring(0,first_air_date.indexOf('-'))}</p>
-  <p class="dot-before flex capitalize">${time_convert(runtime)}</p>
-   <p class="dot-before flex capitalize">${original_language}</p>
-   <p class="dot-before flex capitalize">${iso_3166_1}</p>
+  <p class="w-fit font-serif-two font-medium text-little text-gray">${first_air_date.substring(0,first_air_date.indexOf('-'))}</p>
+  <p class="dot-before flex capitalize w-fit font-serif-two font-medium text-little text-gray">${time_convert(runtime)}</p>
+   <p class="dot-before flex capitalize w-fit font-serif-two font-medium text-little text-gray">${original_language}</p>
+   <p class="dot-before flex capitalize w-fit font-serif-two font-medium text-little text-gray">${iso_3166_1}</p>
     </span>
- 
-  <span >
-      <a class="w-fit capitalize bg-green blur rounded-10px px-24 py-12 flex items-center gap-10 text-white text-sm w-fit leading-22"  href="${homepage}"><i class="fa-regular fa-circle-play"></i>visit website</a>
-     
-      
-  </span>
+    <span >
+    <a class="w-fit capitalize bg-green blur rounded-10px px-24 py-12 flex items-center gap-10 text-white text-sm font-bold font-serif-one w-fit leading-22"  href="${homepage}"><i class="fa-solid fa-link"></i>visit website</a>
+   
+    
+</span>
   
   </div>
 
@@ -161,11 +207,12 @@ const {
   `
 
   slide_wrapper.appendChild(main_slide);
-  
+   
 
+
+  story_line.classList.add('font-serif-two' ,'font-light' ,'text-white' ,'text-left');
   story_line.innerHTML =`${overview}`
-  console.log(name,profile_path,id);
-  get_Director_Details({name,profile_path});
+    get_Director_Details({name,profile_path});
 
 
   function get_Director_Details(...director){
@@ -178,10 +225,10 @@ const {
 
     director_holder.innerHTML = `
            
-    <a class="flex items-center" href="./about-person.html">
+    <a class="flex items-center gap-12" href="./about-person.html">
     <img src="${profile_path == null ? '../assets/images/dark.jpg': `${imageBaseUrl}/w185/${profile_path}`}" class="director-image object-center object-fit rounded-50 gap-4" alt="${name}">
         <span class="flex flex-col justify-between gap-10">
-            <p class="">${name}</p>
+            <p class="leading-24 font-semibold text-white text-little font-serif-one">${name}</p>
            </span>
     </a>
         
@@ -191,7 +238,7 @@ const {
     director_holder.addEventListener('click', ()=>{
       getpersonId(id);
      });
-     console.log(director_holder);
+    
     });
    
   }
@@ -235,8 +282,7 @@ const {
   function similar_series(input){
    
     function similarMovies({results:similar}){
-      console.log(similar);
-
+      
         //Incase it can't find anything
         if(similar !== undefined){
      
@@ -273,18 +319,18 @@ swiperThreeSlide.classList.add('swiper-slide', 'swiper-slide-three');
      <img src="${imageBaseUrl}/w500/${poster_path}" class="rounded-10px" alt="${name}">
      <div class="poster-content flex flex-col items-start gap-4">
          <span>
-             <p class="text-gray-50 text-1xl capitalize font-bold">${name}</p>
+             <p class="text-gray-50 text-1xl capitalize font-serif-two leading-32 font-bold">${name}</p>
          </span>
          
          <span class="flex gap-4 items-center">
          <span class="flex gap-4 items-center">
              <i class="fa-solid fa-star text-yellow icon-small"></i>
-             <p class="text-xl text-gray-50 font-semibold">${vote_average}</p>
+             <p class="text-xl text-gray-50 font-semibold font-serif-two leading-20 text-center">${vote_average}</p>
          </span>
 
          <span class="slash-before text-gray-100 text-xs font-medium flex gap-4 capitalize">
-         <p>${original_language}</p>
-         <p class="dot-before flex capitalize">${first_air_date.substring(0,first_air_date.indexOf('-'))}</p>
+         <p class="dot-before flex capitalize font-serif-two leading-20 text-center">${original_language}</p>
+         <p class="dot-before flex capitalize font-serif-two leading-20 text-center">${first_air_date.substring(0,first_air_date.indexOf('-'))}</p>
          </span>
          </span>
      </div>
@@ -326,12 +372,12 @@ const reviews_wrapper = component_five.querySelector('.movie-reviews');
 
 
 get_Reviews(seriesId);
+
 function get_Reviews(id){
 
   
 const reviews = function({results: reviewList}){
-   console.log(reviewList);
-
+   
   if(reviewList.length == 0){
     component_five.remove();
     return;
@@ -362,21 +408,21 @@ review_card.innerHTML =
             <img src="${avatar_path == null ? '../assets/images/dark.jpg': `${imageBaseUrl}/w185/${avatar_path}`}" class="director-image object-center object-fit rounded-50 gap-4" alt="${author}">
             <div class="text-white flex flex-col">
                 <span>
-                    <p>A review by ${author}</p>
+                    <p class="font-semibold text-white text-sm font-serif-one leading-20 text-left">A review by ${author}</p>
                 </span>
                 <span class="flex gap-4 items-center">
                     <span class="flex gap-4 items-center">
                         <i class="fa-solid fa-star text-yellow icon-small"></i>
-                        <p class="text-xl text-gray-50 font-semibold">${rating == null ? '😃 ': `${rating}`}</p>
+                        <p class="text-xl text-gray-50 font-light font-serif-two leading-20 text-center">${rating == null ? '😃 ': `${rating}`}</p>
                     </span>
                   <span>
-                    <p>recently written and updated by ${username} on ${updated_at}</p>
+                  <p class="text-gray-50 font-semibold font-serif-two leading-20 text-center">recently written and updated by ${username} on ${updated_at.substring(0,updated_at.indexOf('T'))}</p>
                   </span>
                 </span>
             </div>
         </div>
         <div class="bottom text-white">
-            <p>${content}</p>
+        <p class="font-serif-two font-light text-white text-left leading-32">${content}</p>
         </div>
 `
 console.log(review_card);

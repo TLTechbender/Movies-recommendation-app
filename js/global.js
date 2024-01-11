@@ -1,11 +1,49 @@
 
+/**
+ * I am trying to implement a loader before the page finishes loading, but sadly for me it makes
+ * it kinda look worse
+ */
+
+// document.onreadystatechange = function () {
+//     if (document.readyState !== "complete") {
+        
+//         document.querySelector(
+//             "main").style.visibility = "hidden";
+            
+//         document.querySelector(
+//             "#loader").style.visibility = "visible";
+//     } else {
+//         document.querySelector(
+//             "#loader").style.display = "none";
+//         document.querySelector(
+//             "main").style.visibility = "visible";
+//     }
+// };
+
+
+const navLinks = document.querySelectorAll(".nav-link");
+
+    
+navLinks.forEach((navLink)=>{
+    
+  
+    if(navLink.href === window.location.href +"#"){
+        navLink.classList.add("current-page");
+        console.log(navLink.href);
+    } else if (navLink.href === window.location.href)  {
+        navLink.classList.add("current-page");
+        console.log(navLink.href);
+    }
+
+});
+
+
+
 
 const nav = document.querySelector('nav')
 window.addEventListener('scroll', ()=>{
     nav.classList.toggle('fixed-item', window.scrollY >45);
-     
-    
-  
+        
   });
 
 //responsive menu
@@ -115,5 +153,4 @@ localStorage.setItem("seriesId", String(seriesid));
 export const getpersonId = function (personid){
     localStorage.setItem("personId", String(personid));
     }
-
 
