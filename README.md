@@ -34,6 +34,7 @@ git clone https://github.com/TLTechbender/Movies-recommendation-app.git
 - [X] Handle Api data 
 - [X] Make website dynamic
 - [X] Responsive and sexy css
+- [ ] Accessibility
 
  ## HELP!!
 Suggestions and improvements would mean a lot to me, feel free to pull the repo and make it even better.
@@ -42,6 +43,7 @@ Suggestions and improvements would mean a lot to me, feel free to pull the repo 
 ## UPDATE ONE
 ### LESSONS LEARNED
 * swiper.js is not comfortable with using css to specify it's width, it prefers the breakpoints specified in the js file
+* The more I query the API the better I can account for unexpected errors and edge cases.
 
 
 
